@@ -12,7 +12,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
     TextView tv,tv2,tv3,tv4,tv5,tv6,tv7,current;
     ImageButton prevM,prevY,nextM,nextY;
-    int currentMonth,currentYear;
+    int currentMonth,currentDate,currentYear;
     TextView[] dates = new TextView[43];
     String[] month = {"January","February","March","April","May","June","July","August","September","October","November","December"};
     @Override
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         currentMonth = calendar.get(Calendar.MONTH);
         currentYear = calendar.get(Calendar.YEAR);
+        currentDate = calendar.get(Calendar.DATE);
 
         tv = (TextView)findViewById(R.id.textView);
         tv.setTypeface(tf,Typeface.BOLD);
@@ -82,7 +83,10 @@ public class MainActivity extends AppCompatActivity {
             dates[i].setBackgroundResource(R.drawable.textview_round);
             dates[i].setTextColor(getResources().getColor(R.color.md_grey_800));
             dates[i].setTextSize(25);
-
+            if(j == currentDate+1)
+            {
+                dates[i].setBackgroundResource(R.drawable.textview_current_date);
+            }
         }
         current = (TextView)findViewById(R.id.current_calender);
         current.setText(month[currentMonth]+" "+currentYear);

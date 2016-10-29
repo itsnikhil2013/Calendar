@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>\
     <color name="md_teal_100">#b2dfdb</color>
     <color name="md_grey_800">#424242</color>
+    <color name="md_green_400">#66bb6a</color>
 </resources>
