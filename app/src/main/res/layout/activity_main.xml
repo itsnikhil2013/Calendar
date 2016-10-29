@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nikhil.development.com.calendar.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="0.125"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_previous"
+                    android:background="@drawable/button"
+                    android:id="@+id/previous_year"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="0.125"
+                    android:src="@drawable/ic_prev"
+                    android:background="@drawable/button"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/previous_month"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:textAlignment="center"
+                    android:id="@+id/current_calender"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="0.125"
+                    android:src="@drawable/ic_nxt"
+                    android:background="@drawable/button"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next_month"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="0.125"
+                    android:src="@drawable/ic_next"
+                    android:background="@drawable/button"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next_year"/>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/title"
+                android:layout_alignParentStart="true">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="#9575cd">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Sun"
+                        android:id="@+id/textView"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Mon"
+                        android:id="@+id/textView2"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Tue"
+                        android:id="@+id/textView3"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Wed"
+                        android:id="@+id/textView4"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Thu"
+                        android:id="@+id/textView5"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Fri"
+                        android:id="@+id/textView6"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Sat"
+                        android:id="@+id/textView7"
+                        android:layout_column="6" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="#e8eaf6">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/day1"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/day2"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/day3"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/day4"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day5"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day6"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day7"
+                        android:layout_column="6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="#e8eaf6">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day8"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day9"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day10"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day11"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day12"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day13"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day14"
+                        android:layout_column="6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="#e8eaf6">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day15"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day16"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day17"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day18"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day19"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day20"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day21"
+                        android:layout_column="6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="#e8eaf6">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day22"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day23"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day24"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day25"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day26"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day27"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day28"
+                        android:layout_column="6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="#e8eaf6">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day29"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day30"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day31"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day32"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day33"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day34"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day35"
+                        android:layout_column="6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="#e8eaf6">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day36"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day37"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day38"
+                        android:layout_column="2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day39"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day40"
+                        android:layout_column="4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day41"
+                        android:layout_column="5" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.142"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/day42"
+                        android:layout_column="6" />
+
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
